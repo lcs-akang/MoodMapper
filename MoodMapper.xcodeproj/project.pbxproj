@@ -11,6 +11,7 @@
 		A795E71C29DF0D5B0074049A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71B29DF0D5B0074049A /* Assets.xcassets */; };
 		A795E71F29DF0D5B0074049A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */; };
 		A795E72729DF0E3B0074049A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E72629DF0E3B0074049A /* ListView.swift */; };
+		A795E72A29DF12C00074049A /* MoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E72929DF12C00074049A /* MoodItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A795E71B29DF0D5B0074049A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A795E72629DF0E3B0074049A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		A795E72929DF12C00074049A /* MoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		A795E72829DF0E480074049A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A795E72929DF12C00074049A /* MoodItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				A795E72729DF0E3B0074049A /* ListView.swift in Sources */,
 				A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */,
+				A795E72A29DF12C00074049A /* MoodItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

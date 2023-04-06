@@ -9,7 +9,68 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text("Hello, World!")
+        
+        NavigationView {
+            
+            VStack {
+                
+                HStack {
+                    
+                    TextField("__", text: Binding.constant(""))
+                        .frame(maxWidth: 50)
+                        .font(.largeTitle)
+                    
+                    TextField("Enter your mood", text: Binding.constant(""))
+                        .font(.title2)
+                        .textCase(.uppercase)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("ADD")
+                            .font(.caption)
+                    })
+                }
+                .padding(20)
+                
+                List {
+                    
+                    HStack(spacing: 15) {
+                        
+                        Text("✅")
+                            .font(.largeTitle)
+                        
+                        Text("Fantastic")
+                            .font(.title2)
+                            .textCase(.uppercase)
+                    }
+                    
+                    HStack(spacing: 15) {
+                        
+                        Text("✅")
+                            .font(.largeTitle)
+                        
+                        Text("amazing")
+                            .font(.title2)
+                            .textCase(.uppercase)
+                    }
+                    
+                    HStack(spacing: 15) {
+                        
+                        Text("✅")
+                            .font(.largeTitle)
+                        
+                        Text("Great")
+                            .font(.title2)
+                            .textCase(.uppercase)
+                    }
+                    
+                    
+                    
+                }
+            }
+            .navigationTitle("Mood Mapper")
+        }
     }
 }
 
