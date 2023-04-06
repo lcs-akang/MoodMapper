@@ -66,20 +66,25 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List(moodItems.results) { currentItem in
+                List {
                     
-                    Label(title: {
-                        Text(currentItem.description)
-                            .textCase(.uppercase)
-                    }, icon: {
-                        Text(currentItem.emoji)
-                            
-                    })
-                    
-                    
-                    
+                    ForEach(moodItems.results) { currentItem in
+                        
+                        Label(title: {
+                            Text(currentItem.description)
+                                .textCase(.uppercase)
+                        }, icon: {
+                            Text(currentItem.emoji)
+                                
+                        })
+                        
+                        
+                        
+                    }
+
                 }
-            }
+                
+                            }
             .navigationTitle("Mood Mapper")
         }
     }
