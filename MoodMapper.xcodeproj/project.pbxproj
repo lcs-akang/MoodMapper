@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E71729DF0D530074049A /* MoodMapperApp.swift */; };
-		A795E71A29DF0D530074049A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E71929DF0D530074049A /* ContentView.swift */; };
 		A795E71C29DF0D5B0074049A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71B29DF0D5B0074049A /* Assets.xcassets */; };
 		A795E71F29DF0D5B0074049A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */; };
+		A795E72729DF0E3B0074049A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E72629DF0E3B0074049A /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A795E71429DF0D530074049A /* MoodMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A795E71729DF0D530074049A /* MoodMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMapperApp.swift; sourceTree = "<group>"; };
-		A795E71929DF0D530074049A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A795E71B29DF0D5B0074049A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A795E72629DF0E3B0074049A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				A795E71729DF0D530074049A /* MoodMapperApp.swift */,
-				A795E71929DF0D530074049A /* ContentView.swift */,
+				A795E72529DF0DFB0074049A /* Views */,
+				A795E72829DF0E480074049A /* Model */,
 				A795E71B29DF0D5B0074049A /* Assets.xcassets */,
 				A795E71D29DF0D5B0074049A /* Preview Content */,
 			);
@@ -65,6 +66,21 @@
 				A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A795E72529DF0DFB0074049A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A795E72629DF0E3B0074049A /* ListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A795E72829DF0E480074049A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A795E71A29DF0D530074049A /* ContentView.swift in Sources */,
+				A795E72729DF0E3B0074049A /* ListView.swift in Sources */,
 				A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
