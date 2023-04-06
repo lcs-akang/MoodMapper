@@ -33,37 +33,15 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List {
+                List(existingMoodItems) { currentItem in
                     
-                    HStack(spacing: 15) {
-                        
-                        Text("✅")
-                            .font(.largeTitle)
-                        
-                        Text("Fantastic")
-                            .font(.title2)
+                    Label(title: {
+                        Text(currentItem.description)
                             .textCase(.uppercase)
-                    }
-                    
-                    HStack(spacing: 15) {
-                        
-                        Text("✅")
-                            .font(.largeTitle)
-                        
-                        Text("amazing")
-                            .font(.title2)
-                            .textCase(.uppercase)
-                    }
-                    
-                    HStack(spacing: 15) {
-                        
-                        Text("✅")
-                            .font(.largeTitle)
-                        
-                        Text("Great")
-                            .font(.title2)
-                            .textCase(.uppercase)
-                    }
+                    }, icon: {
+                        Text(currentItem.emoji)
+                            
+                    })
                     
                     
                     
