@@ -5,13 +5,20 @@
 //  Created by Aidan Kang on 2023-04-06.
 //
 
+import Blackbird
 import SwiftUI
 
 struct ListView: View {
     
     // MARK: Stored properties
     
-    @State var moodItems: [MoodItem] = existingMoodItems
+    @Environment(\.blackbirdDatabase) var db:
+    Blackbird.Database?
+    
+    @BlackbirdLiveModels({ db in
+        try await MoodItem.read(from: db)
+    }) var moodItems
+    
     @State var newItemDescription: String = " "
     @State var newItemEmoji: String = " "
     
@@ -35,15 +42,14 @@ struct ListView: View {
                     
                     Button(action: {
                         
-                        let lastId = moodItems.last!.id
-                        let newId = lastId + 1
-                        let newMoodItem = MoodItem(id: newId,
-                                                   description: newItemDescription,
-                                                   emoji: newItemEmoji)
-                        moodItems.append(newMoodItem)
-                        
+                        Task {
+                        try await db!.transaction { core in
+                            try core.query("INSERT INTO MoodItem (description) VALUES (?)", newItemDescription)
+                            
+                        }
                         newItemDescription = " "
-                        
+                    }
+
                     }, label: {
                         Text("ADD")
                             .font(.caption)
@@ -51,7 +57,7 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List(moodItems) { currentItem in
+                List(moodItems.results) { currentItem in
                     
                     Label(title: {
                         Text(currentItem.description)
