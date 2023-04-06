@@ -48,6 +48,15 @@ struct ListView: View {
                             
                         }
                         newItemDescription = " "
+                            
+                    }
+                        Task {
+                        try await db!.transaction { core in
+                            try core.query("INSERT INTO MoodItem (emoji) VALUES (?)", newItemEmoji)
+                            
+                        }
+                        newItemEmoji = " "
+                            
                     }
 
                     }, label: {
