@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    // MARK: Stored properties
+    
+    @State var moodItems: [MoodItem] = existingMoodItems
+    @State var newItemDescription: String = " "
+    @State var newItemEmoji: String = " "
+    
+    
+    // MARK: Computed properties
     var body: some View {
         
         NavigationView {
@@ -16,15 +25,24 @@ struct ListView: View {
                 
                 HStack {
                     
-                    TextField("__", text: Binding.constant(""))
+                    TextField("__", text: $newItemEmoji)
                         .frame(maxWidth: 50)
                         .font(.largeTitle)
                     
-                    TextField("Enter your mood", text: Binding.constant(""))
+                    TextField("Enter your mood", text: $newItemDescription)
                         .font(.title2)
                         .textCase(.uppercase)
                     
                     Button(action: {
+                        
+                        let lastId = moodItems.last!.id
+                        let newId = lastId + 1
+                        let newMoodItem = MoodItem(id: newId,
+                                                   description: newItemDescription,
+                                                   emoji: newItemEmoji)
+                        moodItems.append(newMoodItem)
+                        
+                        newItemDescription = " "
                         
                     }, label: {
                         Text("ADD")
@@ -33,7 +51,7 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List(existingMoodItems) { currentItem in
+                List(moodItems) { currentItem in
                     
                     Label(title: {
                         Text(currentItem.description)
