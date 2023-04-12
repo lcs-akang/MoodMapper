@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A785AF8829E7069000BFB194 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A785AF8729E7069000BFB194 /* db.sqlite */; };
 		A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E71729DF0D530074049A /* MoodMapperApp.swift */; };
 		A795E71C29DF0D5B0074049A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71B29DF0D5B0074049A /* Assets.xcassets */; };
 		A795E71F29DF0D5B0074049A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */; };
 		A795E72729DF0E3B0074049A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E72629DF0E3B0074049A /* ListView.swift */; };
 		A795E72A29DF12C00074049A /* MoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E72929DF12C00074049A /* MoodItem.swift */; };
-		A795E72C29DF4F4B0074049A /* MoodMapper.db in Resources */ = {isa = PBXBuildFile; fileRef = A795E72B29DF4F4B0074049A /* MoodMapper.db */; };
 		A795E72F29DF4F980074049A /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = A795E72E29DF4F980074049A /* Blackbird */; };
 		A795E73229DF4FEF0074049A /* AppDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E73129DF4FEF0074049A /* AppDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A785AF8729E7069000BFB194 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = SOURCE_ROOT; };
 		A795E71429DF0D530074049A /* MoodMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A795E71729DF0D530074049A /* MoodMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMapperApp.swift; sourceTree = "<group>"; };
 		A795E71B29DF0D5B0074049A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A795E72629DF0E3B0074049A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		A795E72929DF12C00074049A /* MoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodItem.swift; sourceTree = "<group>"; };
-		A795E72B29DF4F4B0074049A /* MoodMapper.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoodMapper.db; sourceTree = SOURCE_ROOT; };
 		A795E73129DF4FEF0074049A /* AppDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +88,7 @@
 		A795E72829DF0E480074049A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A795E72B29DF4F4B0074049A /* MoodMapper.db */,
+				A785AF8729E7069000BFB194 /* db.sqlite */,
 				A795E72929DF12C00074049A /* MoodItem.swift */,
 			);
 			path = Model;
@@ -166,8 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A795E72C29DF4F4B0074049A /* MoodMapper.db in Resources */,
 				A795E71F29DF0D5B0074049A /* Preview Assets.xcassets in Resources */,
+				A785AF8829E7069000BFB194 /* db.sqlite in Resources */,
 				A795E71C29DF0D5B0074049A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

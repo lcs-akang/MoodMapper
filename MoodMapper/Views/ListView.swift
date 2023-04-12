@@ -88,6 +88,29 @@ struct ListView: View {
             .navigationTitle("Mood Mapper")
         }
     }
+    
+    
+    // MARK: Functions
+    func removeRows(at offsets: IndexSet) {
+        
+        Task {
+            
+            try await db!.transaction { core in
+                
+                var idList = ""
+                for offset in offsets {
+                    idList += "\(moodItems.results[offset].id),"
+                }
+                
+                print(idList)
+                idList.removeLast()
+                print(idList)
+                
+                try core.query("DELETE FROM MoodItem WHERE id IN (?)",
+                               idList)
+            }
+        }
+    }
 }
 
 struct ListView_Previews: PreviewProvider {
