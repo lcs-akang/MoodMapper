@@ -15,9 +15,6 @@ struct ListView: View {
     @Environment(\.blackbirdDatabase) var db:
     Blackbird.Database?
     
-    @BlackbirdLiveModels({ db in
-        try await MoodItem.read(from: db)
-    }) var moodItems
     
     @State var newItemDescription: String = " "
     
@@ -68,23 +65,7 @@ struct ListView: View {
                 }
                 .padding(20)
                 
-                List {
-                    
-                    ForEach(moodItems.results) { currentItem in
-                        
-                        Label(title: {
-                            Text(currentItem.description)
-                                .textCase(.uppercase)
-                        }, icon: {
-                            Text(currentItem.emoji)
-                                
-                        })
-                        
-                        
-                        
-                    }
-                    .onDelete(perform: removeRows)
-                }
+                ListItemsView(filteredOn: searchText)
                 .searchable(text: $searchText)
             }
             .navigationTitle("Mood Mapper")
@@ -92,27 +73,7 @@ struct ListView: View {
     }
     
     
-    // MARK: Functions
-    func removeRows(at offsets: IndexSet) {
-        
-        Task {
-            
-            try await db!.transaction { core in
-                
-                var idList = ""
-                for offset in offsets {
-                    idList += "\(moodItems.results[offset].id),"
-                }
-                
-                print(idList)
-                idList.removeLast()
-                print(idList)
-                
-                try core.query("DELETE FROM MoodItem WHERE id IN (?)",
-                               idList)
-            }
-        }
-    }
+
 }
 
 struct ListView_Previews: PreviewProvider {
