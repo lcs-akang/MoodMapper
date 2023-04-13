@@ -20,7 +20,10 @@ struct ListView: View {
     }) var moodItems
     
     @State var newItemDescription: String = " "
+    
     @State var newItemEmoji: String = " "
+    
+    @State var searchText = " "
     
     
     // MARK: Computed properties
@@ -32,7 +35,7 @@ struct ListView: View {
                 
                 HStack {
                     
-                    TextField("__", text: $newItemEmoji)
+                    TextField("_", text: $newItemEmoji)
                         .frame(maxWidth: 50)
                         .font(.largeTitle)
                     
@@ -44,19 +47,18 @@ struct ListView: View {
                         
                         Task {
                         try await db!.transaction { core in
-                            try core.query("INSERT INTO MoodItem (description) VALUES (?)", newItemDescription)
+                            try core.query("INSERT INTO MoodItem (description, emoji) VALUES (?,?)", newItemDescription, newItemEmoji)
                             
                         }
                         newItemDescription = " "
-                            
-                    }
-                        Task {
-                        try await db!.transaction { core in
-                            try core.query("INSERT INTO MoodItem (emoji) VALUES (?)", newItemEmoji)
-                            
-                        }
                         newItemEmoji = " "
                             
+//                        try await db!.transaction { core in
+//                            try core.query("INSERT INTO MoodItem (emoji) VALUES (?)", newItemEmoji)
+//
+//                        }
+//                        newItemEmoji = " "
+//
                     }
 
                     }, label: {
@@ -81,10 +83,10 @@ struct ListView: View {
                         
                         
                     }
-
+                    .onDelete(perform: removeRows)
                 }
-                
-                            }
+                .searchable(text: $searchText)
+            }
             .navigationTitle("Mood Mapper")
         }
     }

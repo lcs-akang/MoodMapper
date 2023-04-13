@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A785AF8829E7069000BFB194 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A785AF8729E7069000BFB194 /* db.sqlite */; };
+		A785AF8C29E8395E00BFB194 /* ListItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785AF8B29E8395E00BFB194 /* ListItemsView.swift */; };
 		A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795E71729DF0D530074049A /* MoodMapperApp.swift */; };
 		A795E71C29DF0D5B0074049A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71B29DF0D5B0074049A /* Assets.xcassets */; };
 		A795E71F29DF0D5B0074049A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A795E71E29DF0D5B0074049A /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A785AF8729E7069000BFB194 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = SOURCE_ROOT; };
+		A785AF8B29E8395E00BFB194 /* ListItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsView.swift; sourceTree = "<group>"; };
 		A795E71429DF0D530074049A /* MoodMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A795E71729DF0D530074049A /* MoodMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodMapperApp.swift; sourceTree = "<group>"; };
 		A795E71B29DF0D5B0074049A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A795E72629DF0E3B0074049A /* ListView.swift */,
+				A785AF8B29E8395E00BFB194 /* ListItemsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A785AF8C29E8395E00BFB194 /* ListItemsView.swift in Sources */,
 				A795E72729DF0E3B0074049A /* ListView.swift in Sources */,
 				A795E71829DF0D530074049A /* MoodMapperApp.swift in Sources */,
 				A795E73229DF4FEF0074049A /* AppDatabase.swift in Sources */,
